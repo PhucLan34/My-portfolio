@@ -11,7 +11,7 @@ var typed = new Typed(".text", {
 function sendEmail() {
     Email.send({
         SecureToken: "e50d6e7e-9c99-4c84-8573-d3fb139add57",
-        To : 'mitheo123@gmail.com',
+        To : 'mitthong12@gmail.com',
         From : document.getElementById("email").value,
         Subject : document.getElementById("subject").value,
         Body : "Name: " + document.getElementById("name").value 
