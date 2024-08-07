@@ -697,6 +697,8 @@ section {
     font-weight: 600;
     transition: 0.5s;
     cursor: pointer;
+    border: transparent;
+    width: 90%;
 }
 
 .contact-form form .send:hover {
