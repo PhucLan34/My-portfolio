@@ -10,7 +10,7 @@ var typed = new Typed(".text", {
 
 function sendEmail() {
     Email.send({
-        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+        SecureToken: "e50d6e7e-9c99-4c84-8573-d3fb139add57",
         To : 'mitheo123@gmail.com',
         From : document.getElementById("email").value,
         Subject : document.getElementById("subject").value,

@@ -254,11 +254,11 @@
             </div>
         </div>
         <div class="contact-form" id="contact-form">
-            <form onsubmit="sendEmail(); return false;" action="" method="post">
-                <input type="text" name="name" placeholder="Enter Your Name" required>
-                <input type="email" name="email" placeholder="Enter Your Email" required>
-                <input type="" name="subject" placeholder="Enter Your Subject">
-                <textarea name="message"  cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+            <form onsubmit="sendEmail(); reset(); return false;" action="" method="post">
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+                <input type="email" id="email" placeholder="Enter Your Email" required>
+                <input type="" id="subject" placeholder="Enter Your Subject">
+                <textarea id="message"  cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
                 <button type="submit" class="send">Send </button>
             </form>
         </div>
