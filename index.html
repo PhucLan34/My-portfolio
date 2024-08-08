@@ -14,13 +14,26 @@
 <body>
     <header class="header">
         <a href="#" class="logo"> Portfolio. </a>
-
+        
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Skills</a>
-            <a href="#project">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <ul class="sidebar">
+                <li onclick="hideSideBar()"><a href="#"><i class='bx bx-x'></i></a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#project">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <ul class="normal">
+                <li class="hideOnMobile"><a href="#home">Home</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#services">Skills</a></li>
+                <li class="hideOnMobile"><a href="#project">Portfolio</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+                <li class="menu-btn" onclick=showSideBar()><a  href="#"><i class='bx bx-menu'></i></a></li>
+            </ul>
+            
         </nav>
     </header>
     <section class="home" id="home">
@@ -46,23 +59,25 @@
     </section>
 
     <section class="about" id="about">
+        <div class="about-section">
+            <div class="about-img">
+                <img src="./assets/avatar.jpg">
+            </div>
 
-        <div class="about-img">
-            <img src="./assets/avatar.jpg">
-        </div>
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <h4>Full Stack Developer</h4>
+                <p>A versatile full-stack developer with extensive experience in front-end and back-end 
+                    development. Proficient in HTML, CSS, JavaScript, Vue.js, C#, PHP, and WordPress. Strong problem-solving skills and attention 
+                    to detail ensure high-quality, scalable web applications. Effective collaborator with cross-functional teams to design, 
+                    develop, and deploy innovative solutions. Committed to continuous learning and staying updated with industry trends. Excellent 
+                    communication skills, capable of explaining complex technical concepts to diverse audiences. Ready to tackle challenging projects and 
+                    contribute effectively within a collaborative team environment.
+                </p>
 
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Full Stack Developer</h4>
-            <p>A versatile full-stack developer with extensive experience in front-end and back-end 
-                development. Proficient in HTML, CSS, JavaScript, Vue.js, C#, PHP, and WordPress. Strong problem-solving skills and attention 
-                to detail ensure high-quality, scalable web applications. Effective collaborator with cross-functional teams to design, 
-                develop, and deploy innovative solutions. Committed to continuous learning and staying updated with industry trends. Excellent 
-                communication skills, capable of explaining complex technical concepts to diverse audiences. Ready to tackle challenging projects and 
-                contribute effectively within a collaborative team environment.
-            </p>
-
-                <a href="https://drive.google.com/file/d/1i2ZD9SsTJR3Df-NU-CCPUnzGcU75kYSL/view?usp=sharing" class="btn-box">More About Me</a>
+                    <a href="https://drive.google.com/file/d/1i2ZD9SsTJR3Df-NU-CCPUnzGcU75kYSL/view?usp=sharing" class="btn-box">More About Me</a>
+            
+                </div>
         </div>
     </section>
 
@@ -198,32 +213,35 @@
     </section>
 
     <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me</span></h2>
-            <h4>Let's work Together</h4>
-            <p>I'm actively looking for new opportunities as a full-stack developer or an IT support officer, my inbox is always opening. 
-                Whether you have a question or just want to say Hi, I'll try my best to get back to you!</p>
-            <div class="contact-list">
-                <ul>
-                    <li><i class='bx bxs-send'></i> mitthong12@gmail.com</li>
-                    <li><i class='bx bxs-phone'></i> +61 403461707</li>
-                </ul>
+        <div class="contact-container">
+            <div class="contact-text">
+                <h2>Contact <span>Me</span></h2>
+                <h4>Let's work Together</h4>
+                <p>I'm actively looking for new opportunities as a full-stack developer or an IT support officer, my inbox is always opening. 
+                    Whether you have a question or just want to say Hi, I'll try my best to get back to you!</p>
+                <div class="contact-list">
+                    <ul>
+                        <li><i class='bx bxs-send'></i> mitthong12@gmail.com</li>
+                        <li><i class='bx bxs-phone'></i> +61 403461707</li>
+                    </ul>
+                </div>
+                <div class="contact-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100009053668989&mibextid=LQQJ4d"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="https://www.instagram.com/phuclan.phn/?hl=vi"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B61403461707&text&type=phone_number&app_absent=0"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.linkedin.com/in/phuc-phan-04748a2b1"><i class='bx bxl-linkedin' ></i></a>
+                </div>
             </div>
-            <div class="contact-icons">
-                <a href="https://www.facebook.com/profile.php?id=100009053668989&mibextid=LQQJ4d"><i class='bx bxl-facebook-circle' ></i></a>
-                <a href="https://www.instagram.com/phuclan.phn/?hl=vi"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://api.whatsapp.com/send/?phone=%2B61403461707&text&type=phone_number&app_absent=0"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://www.linkedin.com/in/phuc-phan-04748a2b1"><i class='bx bxl-linkedin' ></i></a>
+            <div class="contact-form" id="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="69c72580-976b-442a-b77b-7e7fc7924095">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="" name="subject" placeholder="Enter Your Subject">
+                    <textarea name="message"  cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                    <button type="submit" class="send">Send </button>
+                </form>
             </div>
-        </div>
-        <div class="contact-form" id="contact-form">
-            <form onsubmit="sendEmail(); reset(); return false;" action="" method="post">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
-                <input type="email" id="email" placeholder="Enter Your Email" required>
-                <input type="" id="subject" placeholder="Enter Your Subject">
-                <textarea id="message"  cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-                <button type="submit" class="send">Send </button>
-            </form>
         </div>
 
     </section>
