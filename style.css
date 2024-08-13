@@ -1,3 +1,19 @@
+/* Color Pallete */
+:root {
+    --color-primary: #0ef;
+    --color-secondary: rgb(19, 5, 50);
+    --color-hero: #051129;
+    --color-box: rgb(0, 148, 159),
+    0 0 30px rgb(0, 148, 159), 0 0 55px rgb(0, 148, 159),
+    0 0 110px rgb(0, 148, 159), 0 0 220px rgb(0, 148, 159);
+    --color-accent: #ededed;
+    --color-heading: cyan;
+    --color-sidebar: rgba(255, 255, 255, 0.174);
+    --color-body:#081b29;
+    --color-footer: rgb(9, 79, 109);
+    --color-span: cyan;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +23,12 @@
 }
 
 body {
-    color: #ededed;
-    background: #081b29;
+    color: var(--color-accent);
+    background: var(--color-body);
+}
+
+span {
+    color: var(--color-span);
 }
 
 .header {
@@ -17,7 +37,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #051129;
+    background: var(--color-hero);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +72,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #0ef;
+    color: var(--color-primary);
 }
 
 .sidebar {
@@ -62,8 +82,8 @@ body {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.174);
-    backdrop-filter: blur(10px);
+    background-color: var(--color-sidebar);
+    backdrop-filter: blur(15px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -91,7 +111,7 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: rgb(19, 5, 50);
+    background: var(--color-secondary);
     background-position: center;
     background-size: cover;
     display: inline-flex;
@@ -112,10 +132,8 @@ body {
     max-width: 350px;
     margin-left: 150px;
     border-radius: 100%;
-    border: 1px solid cyan;
-    box-shadow: 0 0 10px rgb(0, 148, 159),
-    0 0 30px rgb(0, 148, 159), 0 0 55px rgb(0, 148, 159),
-    0 0 110px rgb(0, 148, 159), 0 0 220px rgb(0, 148, 159);
+    border: 1px solid var(--color-heading);
+    box-shadow: 0 0 10px var(--color-box);
 }
 
 .home-content h3 {
@@ -125,10 +143,6 @@ body {
 
 .home-content h3:nth-of-type(2) {
     margin-bottom: 20px;
-}
-
-.home-content h3 span {
-    color: cyan;
 }
 
 .home-content h1 {
@@ -148,28 +162,28 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: var(--color-primary);
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: 0.3s;
 }
 
 .home-sci a:hover {
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 10px #0ef;
+    background: var(--color-primary);
+    color: var(--color-body);
+    box-shadow: 0 0 10px var(--color-primary);
 }
 
 .btn-box {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: var(--color-primary);
     border-radius: 40px;
     font-size: 16px;
-    color: #081b29;
+    color: var(--color-body);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -178,7 +192,7 @@ body {
 
 .btn-box:hover {
     margin-left: 10px;
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 20px var(--color-heading);
 }
 
 .about-section {
@@ -204,9 +218,6 @@ body {
     font-size: 60px;
 }
 
-.about-text h2 span {
-    color: #0ef;
-}
 .about-text h4 {
     font-size: 29px;
     font-weight: 600;
@@ -255,7 +266,7 @@ body {
 }
 
 .services-list div i {
-    color: #0ef;
+    color: var(--color-primary);
     font-size: 50px;
     margin-bottom: 30px;
 }
@@ -277,10 +288,10 @@ body {
 .read {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: var(--color-primary);
     border-radius: 40px;
     font-size: 16px;
-    color: #081b29;
+    color: var(--color-body);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -289,21 +300,11 @@ body {
 
 .read:hover {
     margin-left: 10px;
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 20px var(--color-heading);
 }
 
 .services-list div:hover {
     transform: translateY(-2px);
-}
-
-.sub-title {
-    text-align: center;
-    font-size: 60px;
-    padding-bottom: 60px;
-}
-
-.sub-title span {
-    color: #0ef;
 }
 
 section {
@@ -335,13 +336,13 @@ section {
     padding-left: 9rem;
     letter-spacing: 1px;
     font-size: 1.4rem;
-    color: #0ef ;
+    color: var(--color-primary) ;
 }
 
 .tl-title-2 {
     letter-spacing: 1px;
     font-size: 1.4rem;
-    color: #0ef;
+    color: var(--color-primary);
     
 }
 
@@ -384,10 +385,6 @@ section {
     text-align: center;
 }
 
-.main-text h2 span {
-    color: #0ef;
-}
-
 .portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(359px, auto));
@@ -414,7 +411,7 @@ section {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), #0ef);
+    background: linear-gradient(rgba(0,0,0,0.1), var(--color-primary));
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -443,7 +440,6 @@ section {
 }
 
 .layer i {
-    color: #ff004f;
     margin-top: 20px;
     font-size: 20px;
     background: #fff;
@@ -478,10 +474,6 @@ section {
     text-align: center;
 }
 
-.contact-text h2 span {
-    color: #0ef;
-}
-
 .contact-text h4 {
     margin: 15px 0;
     color: white;
@@ -507,7 +499,7 @@ section {
 
 .contact-list i {
     display: inline-block;
-    color: #0ef;
+    color: var(--color-primary);
     font-size: 20px;
     font-weight: 600;
     transition: all 0.4s ease;
@@ -515,10 +507,10 @@ section {
 
 .contact-list li a:hover {
     transform: scale(1.01) translateY(-5px);
-    color:#0ef;
+    color:var(--color-primary);
 }
 .contact-icons a {
-    color: #0ef;
+    color: var(--color-primary);
 }
 .contact-icons i {
     display: inline-flex;
@@ -527,7 +519,7 @@ section {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid var(--color-primary);
     border-radius: 50%;
     text-decoration: none;
     margin: 30px 15px 30px 0;
@@ -535,9 +527,9 @@ section {
 }
 
 .contact-icons i:hover {
-    background: #0ef;
+    background: var(--color-primary);
     color: #000;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px var(--color-primary);
 }
 
 .contact-form form {
@@ -565,10 +557,10 @@ section {
 .contact-form form .send {
     display: inline-block;
     padding: 14px 60px;
-    background: #0ef;
+    background: var(--color-primary);
     border-radius: 40px;
     font-size: 18px;
-    color: #081b29;
+    color: var(--color-body);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -579,11 +571,11 @@ section {
 }
 
 .contact-form form .send:hover {
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 20px var(--color-heading);
 }
 
 .footer {
-    background: rgb(9, 79, 109);
+    background: var(--color-footer);
     text-align: center;
     padding: 10px 0;
     margin-top: 50px;
